@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="http://backbonejs.org/backbone-min.js"></script>
+    <script src="/omni.js"></script>
+
+    <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="./style.css"></link>
+</head>
+<body>
+    <div class="header"><h1>Omni Chat</h1></div>
+    <div class="container">
+        <form id="send" onsubmit="return false;"><input placeholder="Type a message..." type="text" /></form>
+        <div class="chat"></div>
+    </div>
+</body>
+</html>
