@@ -1,22 +1,9 @@
 var Omni = require("omni");
 
-var ChatMessage = Omni.Model.extend({
-    defaults: {
-        message: "Something went wrong!"
-    }
-});
-
 var ChatMessages = Omni.Collection.extend({
-    model: ChatMessage,
     createPermission: function(connection) {
-        return true;
+        return true; // Allow all users to create new chat message models (actual messages)
     }
 });
 
-messages = new ChatMessages();
-
-collections = {
-    messages: messages
-}
-
-Omni.listen(1337, collections);
+Omni.listen(1337, {messages: new ChatMessages()});
