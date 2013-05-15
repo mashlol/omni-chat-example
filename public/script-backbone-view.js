@@ -8,7 +8,7 @@ Omni.ready(function() {
             this.listenTo(this.collection, "add", this.addMessage); // Listen for new messages
         },
         addMessage: function(model) {
-            this.$el.find(".chat").prepend($("<p>").html(model.get("message")));
+            this.$el.find(".chat").prepend($("<p>").text(model.get("message")));
         },
         sendMessage: function(event) {
             var $input = this.$el.find("input");
